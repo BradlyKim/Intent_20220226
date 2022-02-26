@@ -6,6 +6,10 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+//    멤버변수 : 코드 초반부 첫번쨰 { 에 바로 만드는 변수
+    val REQ_CODE_NICKNAME = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,6 +38,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
 
+        }
+        
+        btnEditNickName.setOnClickListener { 
+            
+            val myIntent = Intent(this, EditNickNameActivity::class.java)
+            startActivityForResult(myIntent, REQ_CODE_NICKNAME)   // 1000 : 닉네임을 변경하러 간다. 표식으로 사용
+
+            
         }
 
     }
