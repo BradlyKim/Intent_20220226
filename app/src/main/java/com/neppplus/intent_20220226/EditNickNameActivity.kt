@@ -1,5 +1,6 @@
 package com.neppplus.intent_20220226
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,7 +21,7 @@ class EditNickNameActivity : AppCompatActivity() {
             resultIntent.putExtra("nick", inputNickName)
 
 //            OK누른게 맞는지? + 어떤 데이터를 가지고 돌아갈건지 => 결과로 설정
-            setResult(RESULT_OK, resultIntent)
+            setResult(Activity.RESULT_OK, resultIntent)
 
 //            이전 화면으로 복귀
             finish()

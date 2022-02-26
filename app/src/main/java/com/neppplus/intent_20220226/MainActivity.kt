@@ -1,5 +1,6 @@
 package com.neppplus.intent_20220226
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -49,4 +50,25 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+//        어떤 요청을 마치고 돌아온건지 확인 => 닉네임을 가지러 다녀온게 맞나?
+        if(requestCode == REQ_CODE_NICKNAME) {
+
+//            OK눌렀어야 반영 => RESULT_OK가 맞는가?
+            if(resultCode == Activity.RESULT_OK) {
+
+//                닉네임 요청 + OK 둘다 맞다
+//                첨부된 새 닉네임을 꺼내서 > 텍스트뷰에 반영
+
+                val newNickname = data?.getStringExtra("nick")
+                txtNickName.text = newNickname
+
+            }
+        }
+
+    }
+
 }
