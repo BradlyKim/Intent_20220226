@@ -76,6 +76,24 @@
         android:layout_height="wrap_content"
         android:text="전화걸기 (Call)"/>
 
+    <Button
+        android:id="@+id/btnSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자보내기 (Sendto)"/>
+
+    <Button
+        android:id="@+id/btnNaverLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버 링크 (VIEW)"/>
+
+    <Button
+        android:id="@+id/btnKakaoAppLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오톡 앱스토어 링크 (VIEW)"/>
+
 
 
 </LinearLayout>
